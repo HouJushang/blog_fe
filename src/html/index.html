@@ -1,0 +1,39 @@
+<section class="index">
+    <nav class="nav" ng-class="{navActive: nav}">
+        <div class="nav_cover"></div>
+        <div class="nav_content">
+            <div class="nav_box">
+                <img class="headImg" src="www/images/head.jpg" width="80">
+
+                <h1 class="h1"><a ui-sref="index.home">Robin</a></h1>
+
+                <p class="p1">善人者,人亦善之</p>
+                <hr class="hr1">
+                <p class="p2">Hello,欢迎来到我的主页，我是Robin,一名Android开发者，现于安徽合肥就职，修行探索中</p>
+                <hr class="hr2">
+                <div class="link">
+                    <a ui-sref="index.home">首页</a>
+                    <a ui-sref="index.blog">博客</a>
+                    <a href="222">关于</a>
+                </div>
+                <div class="navigation">
+                    <!-- Weibo -->
+                    <a href="http://weibo.com/1639430641/profile?rightmod=1&wvr=6&mod=personinfo" class="navigation1" title="@robin 的微博" target="_blank">
+                    </a>
+                    <!-- Github -->
+                    <a href="https://github.com/robinxdroid" class="navigation2" title="@robin 的 Github" target="_blank">
+                    </a>
+                    <!-- RSS -->
+                    <a href="" title="RSS" class="navigation3" target="_blank">
+                    </a>
+                    <!-- Email -->
+                    <a href="mailto:735506404@robinx.net" class="navigation4" title="邮件联系我">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section class="content">
+        <div class="blog" ui-view></div>
+    </section>
+</section>

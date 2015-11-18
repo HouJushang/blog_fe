@@ -1,0 +1,27 @@
+<div ng-if="!list" class="loading">
+    <img src="www/images/loading.gif" alt=""/>
+</div>
+<div class="blog animateBox" ng-class="list ? 'inBox' : 'outBox'">
+    <ol class="blog_list">
+        <li ng-repeat="item in list  | orderBy:'-id'">
+            <h2>
+                <a href="#/detail/{{item.id}}" title="{{item.title}}">{{item.title}}</a>
+            </h2>
+            <p class="excerpt">{{item.content | htmlToPlaintext | cut:true:150:'...'}}</p>
+            <div class="meta">
+                <time class="meta_time">{{item.date}}</time> •
+                <span class="meta_auto">于 {{item.author.name}}</span>
+                <a href="#/detail/{{item.id}}" class="meta_read">继续阅读</a></div>
+            <hr class="meta_hr">
+        </li>
+    </ol>
+    <section class="page">
+        <a class="page_btn" ng-if="page != 1" ng-click="blogList(page-1)">← 最近</a>
+        <span class="page_count">{{page}} / {{conut}}</span>
+        <a class="page_btn" ng-if="page !== conut" ng-click="blogList(page+1)">更早 →</a>
+    </section>
+    <footer>
+    </footer>
+</div>
+
+

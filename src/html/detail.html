@@ -1,0 +1,12 @@
+<div ng-if="!detail" class="loading">
+    <img src="www/images/loading.gif" alt=""/>
+</div>
+<div class="detail animateBox" ng-class="detail ? 'inBox' : 'outBox'">
+    <h1>{{detail.title}}</h1>
+    <section class="arcContent" ng-bind-html="detail.content | unsafe">
+    </section>
+    <div class="ds-thread" data-thread-key="请将此处替换成文章在你的站点中的ID" data-title="请替换成文章的标题" data-url="请替换成文章的网址">
+    </div>
+    <footer>
+    </footer>
+</div>

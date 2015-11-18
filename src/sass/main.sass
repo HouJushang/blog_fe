@@ -1,0 +1,34 @@
+$phone-width: 640px
+@import "compass/reset"
+@import "compass"
+@import "index"
+@import "blog"
+@import "detail"
+html,body,.main
+    height: 100%
+body
+    font-family: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", "Lucida Grande", "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif
+    -webkit-font-smoothing: antialiased
+::selection
+    background: #f39ca4
+
+a
+    text-decoration: none
+    color: #000000
+.animateBox
+    transition: 0.8s
+    transition-delay: 0.5s
+    -webkit-transition-delay: 0.5s
+.outBox
+    opacity: 0
+    transform: translate(150px,0)
+.inBox
+    opacity: 1
+    transform: translate(0,0)
+.loading
+    text-align: center
+    img
+        width: 120px
+        margin-top: 20%
+        @media screen and (max-width: $phone-width)
+            width: 20%
